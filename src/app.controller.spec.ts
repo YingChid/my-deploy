@@ -13,9 +13,9 @@ describe('AppController', () => {
   });
 
   describe('getHello', () => {
-    it('should return "Hello"', () => {
+    it('should return "MY deploy server"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getHello()).toBe('Hello');
+      expect(appController.getHello()).toBe('MY deploy server');
     });
   });
 });
