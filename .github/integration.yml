@@ -9,7 +9,7 @@ jobs:
   merge_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
+      - name: Checkout master branch
         uses: actions/checkout@v2
 
       - name: Use Node.js
