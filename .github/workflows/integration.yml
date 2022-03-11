@@ -1,15 +1,15 @@
 name: Continuous Integration
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
 jobs:
-  deployment:
-    runs-on: self-hosted
+  merge_pull_request:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch
+      - name: Checkout main branch
         uses: actions/checkout@v2
 
       - name: Use Node.js
@@ -25,6 +25,3 @@ jobs:
 
       - name: Build application
         run: npm run build
-      
-      - name: Restart server application
-        run: pm2 restart deploy
