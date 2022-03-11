@@ -26,5 +26,8 @@ jobs:
       - name: Build application
         run: npm run build
         
+      - name: Stop application
+        run: pm2 stop all
+      
       - name: Restart server application
         run: pm2 restart deploy
